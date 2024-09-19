@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: whoami
+  namespace: argocd
+spec:
+  project: 'in-cluster-apps'
+  source:
+    repoURL: https://github.com/gideonaryeetey/argo-apps.git
+    path: 'cluster/cls1/whoami'
+  destination:
+    name: 'in-cluster'
+    namespace: testapps
