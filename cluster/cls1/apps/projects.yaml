@@ -1,0 +1,14 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: in-cluster-apps
+  namespace: argocd
+spec:
+  sourceRepos:
+    - 'https://github.com/gideonaryeetey/**'
+  destinations:
+  # Do not allow any app to be installed in `kube-system`  
+  - namespace: '!kube-system'
+    name: 'in-cluster'
+ 
