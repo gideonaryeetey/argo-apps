@@ -6,7 +6,7 @@ metadata:
 spec:
   project: 'in-cluster-apps'
   source:
-    repoURL: https://github.com/gideonaryeetey/argo-apps.git
+    repoURL: https://github.com/gideonaryeetey/argo-apps
     path: 'cluster/cls1/whoami'
   destination:
     name: 'in-cluster'
